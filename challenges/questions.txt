@@ -1,0 +1,18 @@
+/*1. Describe the biggest difference between .forEach & .map.
+   .forEach can change the array and .map returns new array
+
+2. What is the difference between a function and a method?
+    function proform a task and methods are functions attached to an object
+
+3. What is closure?
+    a closure gives you access to an outer function's scope from an inner function.
+
+4. Describe the four rules of the 'this' keyword.
+    1. if a fuction is in the global scope the value is this window scope
+    2.the object to the left is this
+    3. if a construstor function is used this refers to the object that was created by the construstor
+    4. when .call or .apply used its explicit bunding
+
+5. Why do we need super() in an extended class?
+    its used to access and call fuctions from the parent 
+    */
