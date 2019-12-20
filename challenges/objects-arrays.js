@@ -20,8 +20,8 @@ function dinosaur(atts){
     weight:'7000kg',
     lenght: '12m',
     period:'Late Cretaceous',
-    //  roar: function (){
-    //       return `RAWERSRARARWERSARARARRRR!`;
+     roar: function (){
+          return `RAWERSRARARWERSARARARRRR!`;}
   });
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
   const stegosaurus = new dinosaur ({
@@ -55,7 +55,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-// console.log(tyrannosaurus.roar());
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -143,28 +143,33 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-// const lowCaseAnimalNames = [];
-// const lowCaseAnimalNames = zooAnimals.map(animal =>
-//   animal.animal_name.toLowerCase()
-// );
-// console.log(lowCaseAnimalNames);
+
+let lowCaseAnimalNames = [];
+lowCaseAnimalNames = zooAnimals.map((animal) => {
+  return animal.animal_name.toLowerCase();
+});
+console.log(lowCaseAnimalNames);
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-// const lowPopulationAnimals = [];
-// const lowPopulationAnimals = zooAnimals.filter((a) => a.population < 5);
-// console.log(lowPopulationAnimals);
+let lowPopulationAnimals = [];
+lowPopulationAnimals = zooAnimals.filter((animal) => {
+  return animal.population < 5;
+});
+console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-// const populationTotal = 0;
-// const populationTotal = zooAnimals.reduce((acc, val) => acc+val.population,0);
-// console.log(populationTotal);
+let populationTotal = 0;
+populationTotal = zooAnimals.reduce((populationTotal, all) => {
+  return populationTotal + all.population;
+}, 0);
+console.log(populationTotal);
 
 
 /*
